@@ -44,15 +44,16 @@ body {
     // padding-right: 3px;
     min-width: 100vw;
     min-height: 100vh;
-    // background-color: $green;
     overflow-x: hidden !important;
     // border: 2px solid red;
 }
 
-// Windows Browsers | Chrome, Firefox, Opera
+/* Windows Browsers | Chrome, Firefox, Opera */
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    body {
-      padding-right: 16px;
+    @include respond-to-up(xxl) {
+        body {
+            padding-right: 16px;
+        }
     } 
 }
 

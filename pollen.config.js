@@ -3,7 +3,7 @@ const { defineConfig } = require('pollen-css/utils');
 module.exports = defineConfig(pollen => ({
   modules: {
     scale: { ...pollen.scale, '000': '0.6875rem' },
-    letter: {...pollen.letter, xxl: '0.1em' }
+    letter: {...pollen.letter, xxl: '0.1em' },
    } 
   })
 );
