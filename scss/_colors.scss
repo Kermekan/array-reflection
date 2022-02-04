@@ -1,0 +1,89 @@
+@use 'custom' as *;
+@use '../assets/css/pollen.css' as *;
+
+// Colors
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "error": $error,
+  "success": $success,
+  "info": $info,
+  "blue": #1919e6,
+  "red": #e53e3e,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "pink": #ed64a6,
+  "brown": #48321b,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+);
+
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    
+    .text-hover-#{$key} {
+        &:hover {
+            color: $val;
+        }
+    }
+    
+    .bg-#{$key} {
+        background-color: $val;
+    }
+    
+    .border-#{$key} {
+        border: 1px solid $val;
+    }
+    
+    @if($val != black and $val != white) {
+    
+    // Light variations
+    @for $i from 1 through 9 {
+        .text-#{$key}-light-#{$i} {
+            color: mix(white, $val, $i * 10);
+        }
+        
+        .text-hover-#{$key}-light-#{$i} {
+            &:hover {
+                color: mix(white, $val, $i *10);
+            }
+        }
+        
+        .bg-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, $i * 10);
+        }
+        
+        .border-#{$key}-light-#{$i} {
+            border: 1px solid mix(white, $val, $i * 10);
+        }
+    }
+    
+    // Dark variations
+    @for $i from 1 through 9 {
+        .text-#{$key}-dark-#{$i} {
+            color: mix(black, $val, $i * 10);
+        }
+        
+        .text-hover-#{$key}-dark-#{$i} {
+            &:hover {
+                color: mix(black, $val, $i *10);
+            }
+        }
+        
+        .bg-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, $i * 10);
+        }
+        
+        .border-#{$key}-dark-#{$i} {
+            border: 1px solid mix(black, $val, $i * 10);
+        }
+    }
+}
+}
+

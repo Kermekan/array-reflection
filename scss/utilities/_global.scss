@@ -1,0 +1,85 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/breakpoints' as *;
+
+// For Utility Classes and such
+
+/* ---------------------------- Responsive layout --------------------------- */
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* -------------------- Hides Elements based on viewport -------------------- */
+
+.hidden {
+    display: none !important;
+}
+
+// Hide elements below 575px
+.hidden-xs {
+    @media (max-width: 575px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 576px & 767px
+.hidden-sm {
+    @media (min-width: 576px) and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 768px & 991px
+.hidden-md {
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 992px & 1199px
+.hidden-lg {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 991px & 1259px
+.hidden-1260 {
+    @media (min-width: 992px) and (max-width: 1259px) {
+        display: none !important;
+    }
+}
+
+// Hide elements between 1200px & 1399px
+.hidden-xl {
+    @media (min-width: 1200px) and (max-width: 1399px) {
+        display: none !important;
+    }
+}
+
+// Hide elements above 1400px
+.hidden-xxl {
+    @media (min-width: 1400px) {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+

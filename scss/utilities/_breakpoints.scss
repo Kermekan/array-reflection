@@ -1,0 +1,138 @@
+@use '../custom' as *;
+@use '../utilities/mixins' as *;
+
+$breakpoints: (
+  "xs": 360px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+/* ---------------------------------- Grid ---------------------------------- */
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin xxl {
+    @media (min-width: map-get($breakpoints, "xxl")) {
+      @content;
+    }
+}
+
+/* ----------------------------- Custom Viewport ---------------------------- */
+@mixin breakpoint-up($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($bp: 0) {
+    @media (max-width: $bp) {
+      @content;
+    }
+}
+
+/* ---------------------------- Fixed breakpoints --------------------------- */
+@mixin respond-to-up($breakpoint) {
+  // if key exists
+  @if map-has-key($breakpoints, $breakpoint) {
+      // query printed based on value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+      }        
+  }
+}
+
+@mixin respond-to-down($breakpoint) {                    
+  // if key exists
+  @if map-has-key($breakpoints, $breakpoint) {
+      // query printed based on value
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+      }        
+  }
+}
+
+/* -------------------------------- Landscape ------------------------------- */
+@mixin landscape-view-down($breakpoint) {                    
+  // if key exists
+  @if map-has-key($breakpoints, $breakpoint) {
+      // query printed based on value
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+          @media (orientation: landscape) {
+              @content;
+          }
+      }        
+  }
+}
+
+@mixin landscape-view-up($breakpoint) {                    
+  // if key exists
+  @if map-has-key($breakpoints, $breakpoint) {
+      // query printed based on value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+          @media (orientation: landscape) {
+              @content;
+          }
+      }        
+  }
+}
+// .responsive-test {
+//   @include xs {
+//     color: red;
+//   }
+//   @include sm {
+//     color: blue;
+//   }
+//   @include md {
+//     color: green;
+//   }
+//   @include lg {
+//     color: purple;
+//   }
+//   @include xl {
+//     color: orange;
+//   }
+//   @include breakpoint-up(1400px) {
+//     color: pink;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+

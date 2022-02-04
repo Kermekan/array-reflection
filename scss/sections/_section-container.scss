@@ -1,0 +1,39 @@
+@use '../custom' as *;
+@use '../colors' as *;
+@use '../utilities/breakpoints' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/grid' as *;
+
+.full-page {
+    // position: relative;
+    width: 100%;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.my-container {
+    // max-width: 1250px;
+    padding: 20px;
+    margin: 50px auto;
+    
+    // border: 2px solid $green-300;
+    
+    x:-o-prefocus, p {
+        color: #c00;
+    }
+}
+
+@media not all and (-webkit-min-device-pixel-ratio:0) {
+    .my-container {
+         color: $error; }
+}
+
+
+
+
+
+
+
+
+
+
