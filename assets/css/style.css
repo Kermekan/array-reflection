@@ -5679,6 +5679,7 @@ body {
   justify-content: start;
   width: fit-content;
   gap: 15px;
+  margin-right: var(--size-4);
 }
 .btn-container .btn a {
   font-size: var(--scale-1);
@@ -5700,6 +5701,7 @@ body {
 @media (max-width: 768px) {
   .btn-container {
     gap: 10px;
+    margin-bottom: var(--size-4);
   }
   .btn-container .btn {
     padding: 7px 15px;

@@ -72,7 +72,8 @@ body {
 .btn-container {
     justify-content: start;
     width: fit-content;
-    gap: 15px;        
+    gap: 15px;
+    margin-right: var(--size-4);        
     // border: 2px solid red;
     
     .btn {
@@ -92,6 +93,7 @@ body {
     
     @include respond-to-down(md) {
         gap: 10px;
+        margin-bottom: var(--size-4);
         
         .btn {
             padding: 7px 15px;
