@@ -31,40 +31,6 @@ body {
     .heading {
         font-size: var(--scale-3);
     }
-    
-}
-// Button container
-.btn-container {
-    justify-content: start;
-    width: fit-content;
-    gap: 15px;        
-    // border: 2px solid red;
-    
-    .btn {
-        a {
-            font-size: var(--scale-1);
-        }
-    }
-    
-    .new-btn {
-        @include btnColor($purple-300);
-        // border: 2px solid purple;
-    }
-    
-    .save-btn {
-        @include btnColor($success);
-    }
-    
-    @include respond-to-down(md) {
-        gap: 10px;
-        
-        .btn {
-            padding: 7px 15px;
-            a {
-                font-size: var(--scale-0);
-            }
-        }
-    }
 }
 
 /* ----------------------------------- Mid ---------------------------------- */
@@ -98,6 +64,41 @@ body {
     
     @include respond-to-down(md) {
         padding: 0;
+    }
+}
+
+
+// Button container
+.btn-container {
+    justify-content: start;
+    width: fit-content;
+    gap: 15px;        
+    // border: 2px solid red;
+    
+    .btn {
+        a {
+            font-size: var(--scale-1);
+        }
+    }
+    
+    .new-btn {
+        @include btnColor($purple-300);
+        // border: 2px solid purple;
+    }
+    
+    .save-btn {
+        @include btnColor($success);
+    }
+    
+    @include respond-to-down(md) {
+        gap: 10px;
+        
+        .btn {
+            padding: 7px 15px;
+            a {
+                font-size: var(--scale-0);
+            }
+        }
     }
 }
 
