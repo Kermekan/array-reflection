@@ -1,0 +1,112 @@
+@use '../custom' as *;
+@use '../colors' as *;
+@use '../utilities/breakpoints' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/grid' as *;
+
+body {
+    background-color: $grey-600;
+    padding: 0 20px;
+    // border: 2px solid red;
+}
+
+.top {
+    padding: 20px;
+    margin: 50px auto;
+    color: white;
+    background-color: $primary;
+    @include boxShadow;
+    border-radius: var(--radius-lg);
+    border: 2px solid $grey-900;
+    
+    @include respond-to-down(sm) {
+        margin: 30px auto;
+    }
+}
+
+.top .content {
+    justify-content: space-between;
+    // border: 2px solid greenyellow;
+    
+    .heading {
+        font-size: var(--scale-3);
+    }
+    
+}
+// Button container
+.btn-container {
+    justify-content: start;
+    width: fit-content;
+    gap: 15px;        
+    // border: 2px solid red;
+    
+    .btn {
+        a {
+            font-size: var(--scale-1);
+        }
+    }
+    
+    .new-btn {
+        @include btnColor($purple-300);
+        // border: 2px solid purple;
+    }
+    
+    .save-btn {
+        @include btnColor($success);
+    }
+    
+    @include respond-to-down(md) {
+        gap: 10px;
+        
+        .btn {
+            padding: 7px 15px;
+            a {
+                font-size: var(--scale-0);
+            }
+        }
+    }
+}
+
+/* ----------------------------------- Mid ---------------------------------- */
+.mid .content {
+    justify-content: space-between;
+    padding: 0 50px;
+    // border: 2px solid blue;
+    
+    .img-details {
+        gap: 7px;
+        justify-content: start;
+        flex-wrap: nowrap;
+        color: white;
+        // border: 2px solid black;
+        p {
+            text-align: start;
+            margin: 0;
+            white-space: nowrap;
+            // border: 2px solid red;
+        }
+        
+        a {
+            color: white;
+            display: inline-block;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    @include respond-to-down(md) {
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
