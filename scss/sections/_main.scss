@@ -8,11 +8,23 @@ body {
     background-color: $grey-600;
     padding: 0 20px;
     // border: 2px solid red;
+    
+    @include respond-to-down(sm) {
+        padding: 7px;
+    }
 }
 
+.my-container {
+    margin: 50px auto;
+    @include respond-to-down(sm) {
+        margin: 30px auto;
+    }
+}
+
+// Title
 .top {
     padding: 20px;
-    margin: 50px auto;
+    
     color: white;
     background-color: $primary;
     @include boxShadow;
@@ -20,7 +32,7 @@ body {
     border: 2px solid $grey-900;
     
     @include respond-to-down(sm) {
-        margin: 30px auto;
+        text-align: center;
     }
 }
 
@@ -36,6 +48,8 @@ body {
 /* ----------------------------------- Mid ---------------------------------- */
 .mid .content {
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: start;
     padding: 0 50px;
     // border: 2px solid blue;
     
@@ -52,9 +66,13 @@ body {
             // border: 2px solid red;
         }
         
+        // Links
         a {
-            color: white;
             display: inline-block;
+            color: white;
+            text-transform: capitalize;
+            white-space: nowrap;
+            font-weight: var(--weight-semibold);
             
             &:hover {
                 text-decoration: underline;
@@ -62,15 +80,38 @@ body {
         }
     }
     
+    // Breakpoints
     @include respond-to-down(md) {
         padding: 0;
+    }
+    
+    @include breakpoint-down(511px) {
+        justify-content: center;
+        & > * {
+            // margin: 0 auto;
+        }
+        
+        .btn-container {
+            margin-bottom: var(--scale-3);
+        }
+    }
+    
+    @include respond-to-down(xs) {
+        & > * {
+            margin: 0 auto;
+            // border: 2px solid purple;
+        }
+        
+        .btn-container {
+            margin-bottom: var(--scale-3);
+        }
     }
 }
 
 
 // Button container
 .btn-container {
-    justify-content: start;
+    justify-content: center;
     width: fit-content;
     gap: 15px;
     margin-right: var(--size-4);        
@@ -91,15 +132,59 @@ body {
         @include btnColor($success);
     }
     
+    @include breakpoint-down(480px) {
+        margin-right: 0;
+    }
+    
     @include respond-to-down(md) {
         gap: 10px;
-        margin-bottom: var(--size-4);
+        margin-bottom: var(--size-5) !important;
         
         .btn {
             padding: 7px 15px;
             a {
                 font-size: var(--scale-0);
             }
+        }
+    }
+}
+
+/* ------------------------------ Image Section ----------------------------- */
+
+.img-section {
+    background-color: $primary;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    @include boxShadow;
+    border: 2px solid $grey-900;
+    
+    .content {
+        // border: 2px solid red;
+        
+        .img-container {
+            margin-right: auto;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 10px;
+            // border: 5px solid black;
+            
+            // Image
+            img {
+                width: 100%;
+                max-width: 800px;
+                height: 700px;         
+                border-radius: 10px;
+            }
+        }
+    }
+    
+    // Breakpoints
+    @include respond-to-down(sm) {
+        padding: 0;
+        
+        .img-container {
+            margin: 0;
         }
     }
 }

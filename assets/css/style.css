@@ -4514,6 +4514,7 @@ pre {
    ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
+ * Reset styling of links from css frameworks
  */
 a {
   display: block;
@@ -4522,11 +4523,19 @@ a {
   padding: 0;
   width: 100%;
   height: 100%;
+  outline: none;
+  border: none;
 }
 a:hover, a:active, a:focus {
-  color: white !important;
+  color: white;
   outline: none;
-  box-shadow: none !important;
+  box-shadow: none;
+}
+
+img {
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 /**
@@ -5621,21 +5630,32 @@ body {
   background-color: #555d6e;
   padding: 0 20px;
 }
+@media (max-width: 576px) {
+  body {
+    padding: 7px;
+  }
+}
+
+.my-container {
+  margin: 50px auto;
+}
+@media (max-width: 576px) {
+  .my-container {
+    margin: 30px auto;
+  }
+}
 
 .top {
   padding: 20px;
-  margin: 50px auto;
   color: white;
   background-color: #2d3748;
-  box-shadow: var(--elevation-3);
-  box-shadow: var(--elevation-4);
-  box-shadow: var(--elevation-5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
   border-radius: var(--radius-lg);
   border: 2px solid #10181C;
 }
 @media (max-width: 576px) {
   .top {
-    margin: 30px auto;
+    text-align: center;
   }
 }
 
@@ -5649,6 +5669,8 @@ body {
 /* ----------------------------------- Mid ---------------------------------- */
 .mid .content {
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: start;
   padding: 0 50px;
 }
 .mid .content .img-details {
@@ -5663,8 +5685,11 @@ body {
   white-space: nowrap;
 }
 .mid .content .img-details a {
-  color: white;
   display: inline-block;
+  color: white;
+  text-transform: capitalize;
+  white-space: nowrap;
+  font-weight: var(--weight-semibold);
 }
 .mid .content .img-details a:hover {
   text-decoration: underline;
@@ -5674,9 +5699,25 @@ body {
     padding: 0;
   }
 }
+@media (max-width: 511px) {
+  .mid .content {
+    justify-content: center;
+  }
+  .mid .content .btn-container {
+    margin-bottom: var(--scale-3);
+  }
+}
+@media (max-width: 360px) {
+  .mid .content > * {
+    margin: 0 auto;
+  }
+  .mid .content .btn-container {
+    margin-bottom: var(--scale-3);
+  }
+}
 
 .btn-container {
-  justify-content: start;
+  justify-content: center;
   width: fit-content;
   gap: 15px;
   margin-right: var(--size-4);
@@ -5698,16 +5739,51 @@ body {
 .btn-container .save-btn:hover {
   background-color: #3faa6c;
 }
+@media (max-width: 480px) {
+  .btn-container {
+    margin-right: 0;
+  }
+}
 @media (max-width: 768px) {
   .btn-container {
     gap: 10px;
-    margin-bottom: var(--size-4);
+    margin-bottom: var(--size-5) !important;
   }
   .btn-container .btn {
     padding: 7px 15px;
   }
   .btn-container .btn a {
     font-size: var(--scale-0);
+  }
+}
+
+/* ------------------------------ Image Section ----------------------------- */
+.img-section {
+  background-color: #2d3748;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+  border: 2px solid #10181C;
+}
+.img-section .content .img-container {
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+}
+.img-section .content .img-container img {
+  width: 100%;
+  max-width: 800px;
+  height: 700px;
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .img-section {
+    padding: 0;
+  }
+  .img-section .img-container {
+    margin: 0;
   }
 }
 
