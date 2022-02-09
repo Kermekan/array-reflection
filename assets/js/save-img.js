@@ -26,7 +26,7 @@ const submit = document.querySelector(".submit-btn");
 let regEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 function check() {
     // Change colour when checking email
-    if (email.value.match(regEx)) {
+    if (email.value.match(regEx) && email.value.length <= 35) {
         email.style.borderColor = "#48bb78";
         error.style.display = "none";
         success.style.display = "block";
