@@ -1,0 +1,147 @@
+@use '../custom' as *;
+@use '../colors' as *;
+@use '../utilities/breakpoints' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/grid' as *;
+
+.save-image {
+    background-color: $grey-50;
+    width: fit-content;
+    justify-content: start;
+    
+    @include shadowSmall;
+    
+    border-radius: 5px;
+    border: 2px solid $grey-500;
+}
+
+// Email
+.email-container {
+    width: 100%;
+    color: $primary;
+    padding: 30px;
+    // border: 2px solid green;
+    
+    p {
+        font-size: 22px;
+        font-weight: 600;
+        text-align: start;
+        
+        margin-bottom: 15px;
+    }
+}
+
+// Form
+form {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+    // border: 2px solid red;
+    
+    // Input
+    .field {
+        position: relative;
+        width: 100%;
+        // border: 2px solid lightgreen;
+        
+        input {
+            width: 100%;
+            font-size: 18px;
+            padding: 5px 40px 5px 15px;
+            border-radius: 5px;
+            border: 1px solid lightgrey;
+            
+            &:focus {
+                outline: none;
+                background-color: $grey-200;
+            }
+        }
+        
+        // Icons
+        .icons {
+            position: absolute;
+            top: 50%;
+            right: 9px;
+            transform: translateY(-50%);
+            
+            // Icons
+            span {
+                height: 28px;
+                width: 28px;
+                
+                border: 2px solid;
+                border-radius: 50%;
+                line-height: 24px;
+                display: none;
+                
+                &.error-icon {
+                    color: $error;
+                    border-color: $error;
+                }
+                
+                &.success-icon {
+                    color: $success;
+                    border-color: $success;
+                }
+            }
+        }
+    }
+    
+    // Error Text
+    .error-text {
+        width: 100%;
+        position: relative;
+        align-self: start;
+        
+        font-size: 14px;
+        color: $secondary;
+        background-color: $error;
+        
+        margin-top: 3px;
+        padding: 10px 15px;
+        
+        border-radius: 5px;
+        display: none;
+        
+        &::before {
+            position: absolute;
+            content: "";
+            
+            height: 15px;
+            width: 15px;
+            background-color: $error;
+            
+            top: -7px;
+            right: 15px;
+            transform: rotate(45deg);
+        }
+    }
+    
+    .submit-btn {
+        align-self: start;
+        padding: 15px;
+        display: none;
+        @include btnColor($success);
+        // border: 2px solid blue;
+    }
+}
+
+/* ------------------------------- Breakpoints ------------------------------ */
+@include respond-to-down(md) {
+    .save-image, form {
+        flex-direction: column;
+    }
+    
+    .email-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@include respond-to-down(sm) {
+    .save-image {
+        width: 100%;
+    }
+}
+

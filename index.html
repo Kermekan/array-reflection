@@ -5,56 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array Reflection</title>
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet" />
+    
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/d1cb6fec79.js" crossorigin="anonymous"></script>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="">
-    <div class="top my-container">
-        <div class="content flex">
-            <div class="heading">
-                <h3>Random Image Generator</h3>
+    <div class="content my-container flex">
+        <div class="top flex">
+            <!-- title -->
+            <h1>Array Reflection</h1>
+        </div>
+        <div class="image-container">
+            <h3>Image by: <span class="author"></span></h3>
+                <img class="img" />
+        </div>
+        <div class="buttons flex">
+            <!-- image button -->
+            <button id="img-btn" class="btn img-btn">New Image</button>
+            <button id="save-btn" class="btn save-btn">Save Image</button>
+        </div>
+        <!-- Save images -->
+        <div class="save-image flex">
+            <!-- Email -->
+            <div class="email-container">
+                <p>Enter an Email</p>
+                <!-- Form -->
+                <form action="" class="flex">
+                    <div class="field">
+                        <input onkeyup="check()" id="email" type="text" placeholder="Email Address">
+                        <div class="icons">
+                            <span class="error-icon fas fa-exclamation"></span>
+                            <span class="success-icon fas fa-check"></span>
+                        </div>
+                    </div><!-- .field -->
+                    <!-- Error Text -->
+                    <div class="error-text">
+                        Please Enter a valid Email
+                    </div>
+                    <!-- submit -->
+                    <button class="btn submit-btn">Submit</button>
+                </form>
             </div>
-            
-        </div><!-- .content -->
-    </div><!-- .top -->
-    <!-- Main -->
-    <div class="mid my-container">
-        <div class="content flex">
-            <!-- Buttons -->
-            <div class="btn-container flex">
-                <!-- New image -->
-                <button id="newBtn" class="btn new-btn">
-                    <a href="">
-                      New Image
-                    </a>
-                </button>
-                <!-- Save Image -->
-                <button id="saveBtn" class="btn save-btn">
-                    <a href="">
-                      Save Image
-                    </a>
-                </button>
-            </div>
-            <!-- Source & Credits -->
-            <div class="img-details flex">
-                <p class="">Photo by:</p>
-                <a href="" target="_blank" id="creator">Name</a>
-            </div>
-        </div><!-- .content -->
-    </div><!-- .mid -->
-    <!-- Image Section -->
-    <div class="img-section my-container">
-        <div class="content flex">
-            <!-- Image -->
-            <div class="img-container">
-                <a target="_blank" id="imgLink" href="#">
-                  <img alt="" id="unsplashImg" />
-                </a>
-            </div>
-        </div>            
-    </div>
-    <script src="assets/js/app.js"></script>            
+        </div>
+      </div>
+      
+      <!-- JS -->
+      <script src="assets/js/random.js"></script>            
+      <script src="assets/js/save-img.js"></script>            
 </body>
 </html>
