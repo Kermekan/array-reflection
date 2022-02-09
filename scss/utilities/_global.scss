@@ -8,12 +8,18 @@
     background-color: transparent;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 20px;
+    font-weight: bold;
+    color: $text;
+    
     // border: 2px solid firebrick;
     
-    & > * {
-        color: white;
-        // border: 2px solid salmon;
+    &:hover {
+        cursor: pointer;
+    }
+    
+    @include respond-to-down(sm) {
+        padding: 15px 10px;
     }
 }
 
