@@ -5759,11 +5759,12 @@ form .field .icons {
   transform: translateY(-50%);
 }
 form .field .icons span {
-  height: 28px;
-  width: 28px;
+  font-size: 15px;
+  height: 25px;
+  width: 25px;
   border: 2px solid;
   border-radius: 50%;
-  line-height: 24px;
+  line-height: 22px;
   display: none;
 }
 form .field .icons span.error-icon {
@@ -5797,9 +5798,10 @@ form .error-text::before {
   transform: rotate(45deg);
 }
 form .submit-btn {
+  display: block;
   align-self: start;
+  width: 100%;
   padding: 15px;
-  display: none;
   background-color: #48bb78;
   border: 1px solid #389860;
 }

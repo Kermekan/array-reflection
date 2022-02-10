@@ -67,12 +67,13 @@ form {
             
             // Icons
             span {
-                height: 28px;
-                width: 28px;
+                font-size: 15px;
+                height: 25px;
+                width: 25px;
                 
                 border: 2px solid;
                 border-radius: 50%;
-                line-height: 24px;
+                line-height: 22px;
                 display: none;
                 
                 &.error-icon {
@@ -118,10 +119,12 @@ form {
         }
     }
     
+    // Button
     .submit-btn {
+        display: block;
         align-self: start;
+        width: 100%;
         padding: 15px;
-        display: none;
         @include btnColor($success);
         // border: 2px solid blue;
     }
