@@ -47,16 +47,18 @@ body {
 
 .image-container {
     margin: 10px auto;
+    padding: 10px auto;
     
+    h3 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
     // Image
     img {
         max-width: 100%;
         max-height: 600px;
         border-radius: 5px;
         @include boxShadow;
-        
-        @include boxShadow;
-      
     }
     
     @include respond-to-down(sm) {
