@@ -37,27 +37,27 @@
             <div class="email-container">
                 <p>Enter an Email</p>
                 <!-- Form -->
-                <form action="" class="flex">
+                <form id="submitForm" action="" class="flex">
                     <div class="field">
-                        <input onkeyup="check()" id="email" type="text" placeholder="Email Address">
+                        <input onkeyup="check()" id="email" type="text" placeholder="Email Address" required>
                         <div class="icons">
                             <span class="error-icon fas fa-exclamation"></span>
                             <span class="success-icon fas fa-check"></span>
                         </div>
                     </div><!-- .field -->
                     <!-- Error Text -->
-                    <div class="error-text">
+                    <!-- <div class="error-text">
                         Please Enter a valid Email
-                    </div>
+                    </div> -->
                     <!-- submit -->
-                    <button class="btn submit-btn">Submit</button>
+                    <button type="submit" class="btn submit-btn">Submit</button>
                 </form>
             </div>
-        </div>
-      </div>
+        </div><!-- .save-image -->
+    </div>
       
       <!-- JS -->
       <script src="assets/js/random.js"></script>            
-      <script src="assets/js/save-img.js"></script>            
+      <script src="assets/js/submit-form.js"></script>
 </body>
 </html>
