@@ -44,7 +44,7 @@ body {
     // padding-right: 3px;
     min-width: 100vw;
     min-height: 100vh;
-    overflow-x: hidden !important;
+    // overflow-x: hidden !important;
 }
 
 /* Windows Browsers | Chrome, Firefox, Opera */
@@ -73,7 +73,18 @@ h1 {
     font-size: 2em;
     margin: 0.67em 0;
 }
-  
+
+/**
+  * Remove margin and padding from text elements 
+  */
+h1,  
+h2,  
+h3,  
+h4,  
+h5,  
+h6,  
+div,  
+span,  
 p {
   padding: 0;
   margin: 0;
@@ -157,8 +168,8 @@ strong {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
   
-  code,
-  kbd,
+code,
+kbd,
 samp {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
@@ -177,7 +188,7 @@ small {
    * all browsers.
    */
   
-  sub,
+sub,
 sup {
     font-size: 75%;
     line-height: 0;
@@ -402,4 +413,12 @@ template {
 [hidden] {
     display: none;
 }
-  
+
+/* Remove list styles*/
+ul,
+ol,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
