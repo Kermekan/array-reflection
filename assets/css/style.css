@@ -5820,7 +5820,7 @@ form .error-text::before {
   transform: rotate(45deg);
 }
 form .submit-btn {
-  display: block;
+  display: none;
   align-self: start;
   width: 100%;
   padding: 15px;
@@ -5859,6 +5859,7 @@ form .submit-btn:hover {
   width: 100%;
 }
 .img-output .list-container .item-list {
+  width: 100%;
   border-radius: 5px;
   background-color: #d4d7dd;
   padding: 15px;
