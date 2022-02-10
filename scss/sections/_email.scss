@@ -8,6 +8,8 @@
     background-color: $grey-50;
     width: fit-content;
     justify-content: start;
+    // flex-direction: column;
+    padding: 30px;
     
     @include shadowSmall;
     
@@ -18,15 +20,18 @@
 // Email
 .email-container {
     width: 100%;
+    margin-bottom: 20px;
     color: $primary;
-    padding: 30px;
     // border: 2px solid green;
+    text-align: center;
     
+    // Text
     p {
         font-size: 22px;
         font-weight: 600;
         text-align: start;
         
+        margin: 0 auto;
         margin-bottom: 15px;
     }
 }
@@ -34,6 +39,7 @@
 // Form
 form {
     width: 100%;
+    // max-width: 450px;
     flex-direction: column;
     gap: 15px;
     align-items: start;
@@ -121,7 +127,7 @@ form {
     
     // Button
     .submit-btn {
-        display: none;
+        display: block;
         align-self: start;
         width: 100%;
         padding: 15px;
@@ -136,7 +142,7 @@ form {
         flex-direction: column;
     }
     
-    .email-container {
+    .save-image {
         padding-left: 20px;
         padding-right: 20px;
     }

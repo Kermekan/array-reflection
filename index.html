@@ -32,27 +32,31 @@
             <button id="save-btn" class="btn save-btn">Save Image</button>
         </div>
         <!-- Save images -->
-        <div class="save-image flex hidden">
+        <div class="save-image flex">
             <!-- Email -->
             <div class="email-container">
                 <p>Enter an Email</p>
                 <!-- Form -->
                 <form id="submitForm" action="" class="flex">
                     <div class="field">
-                        <input onkeyup="check()" id="email" type="text" placeholder="Email Address" required>
+                        <input onkeyup="validate()" id="email" type="text" placeholder="Email Address" required>
                         <div class="icons">
                             <span class="error-icon fas fa-exclamation"></span>
                             <span class="success-icon fas fa-check"></span>
                         </div>
                     </div><!-- .field -->
                     <!-- Error Text -->
-                    <!-- <div class="error-text">
+                    <div class="error-text">
                         Please Enter a valid Email
-                    </div> -->
+                    </div>
                     <!-- submit -->
                     <button type="submit" class="btn submit-btn">Submit</button>
                 </form>
             </div>
+            <!-- Output -->
+            <div id="output" class="img-output flex">
+                
+            </div><!-- .save-output -->
         </div><!-- .save-image -->
     </div>
       

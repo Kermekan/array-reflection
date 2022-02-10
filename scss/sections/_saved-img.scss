@@ -1,0 +1,74 @@
+@use '../custom' as *;
+@use '../colors' as *;
+@use '../utilities/breakpoints' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/grid' as *;
+
+
+// Image Output
+.img-output {
+    color: $primary;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    // border: 2px solid green;
+    
+    // Contains all lists
+    .list-container {
+        gap: 15px;
+        border-radius: 5px;
+        width: 100%;
+        // border: 2px solid palevioletred;
+        
+        // contains list of photos
+        .item-list {
+            border-radius: 5px;
+            background-color: $grey-300;
+            padding: 15px;
+            // border: 2px solid purple;
+            
+            h3 {
+                margin-bottom: 15px;
+            }
+            
+            // List of images
+            .img-list {
+                border-radius: 5px;
+                background-color: $grey-400;
+                padding: 18px;
+                
+                flex-direction: row;
+                flex-wrap: wrap-reverse;
+                justify-content: space-evenly;
+                gap: 7px;
+                
+                // Individual Images
+                .img-container {
+                    max-width: 40%;
+                    border-radius: 5px;
+                    // border: 2px solid black;
+                    
+                    @include respond-to-up(sm){
+                        max-width: 30%;
+                    }
+                    
+                    
+                    @include respond-to-up(md){
+                        max-width: 20%;
+                    }
+                    
+                    @include respond-to-up(lg){
+                        max-width: 18%;
+                    }
+                    
+                    img {
+                        max-width: 100%;
+                        max-height: 180px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
