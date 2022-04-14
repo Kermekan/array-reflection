@@ -1,12 +1,12 @@
 // Variables
 const authorSpan = document.querySelector(".author");
 const imgDiv = document.querySelector(".image-container");
-const img = document.querySelector(".img");
+const img = document.createElement("img");
 const imgButton = document.querySelector("#img-btn");
 let imgsArray = [];
 
 // Request data from API
-const getImage = async function () {
+const getImage = async () => {
     const response = await fetch("https://picsum.photos/v2/list?limit=1000");
     const images = await response.json();
     selectRandomImage(images);
@@ -30,8 +30,8 @@ const displayImage = function (randomImage) {
     imageAddress = randomImage.download_url;
     authorSpan.innerText = author;
     
+    imgDiv.appendChild(img);
     img.src = imageAddress;
-    imgDiv.classList.remove("hide");
     // console.log(imageAddress);
 };
 
