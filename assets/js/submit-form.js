@@ -80,7 +80,7 @@ submitForm.addEventListener("submit", function(e) {
 
     let savedEmails = [];
     let thisImage = img.src;
-    console.log(thisImage);
+    // console.log(thisImage);
     
     // Only run if email is valid
     if (!email.value.match(regEx) && email.value.length <= 30) {
