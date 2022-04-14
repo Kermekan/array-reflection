@@ -5871,6 +5871,11 @@ form .submit-btn:hover {
 .img-output .list-container .item-list h3 {
   margin-bottom: 15px;
 }
+@media (max-width: 576px) {
+  .img-output .list-container .item-list h3 {
+    font-size: 0.875rem;
+  }
+}
 .img-output .list-container .item-list .img-list {
   border-radius: 5px;
   background-color: #a5aab4;
